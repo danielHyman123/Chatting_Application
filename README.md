@@ -1,0 +1,1 @@
+This project is a Java Group Chat Server. Any number of users can join and conversate with one another. When a user joins the server, they are first prompted with an identfying name, and then can begin messaging in the server. Have fun!
