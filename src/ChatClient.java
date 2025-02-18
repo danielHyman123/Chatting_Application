@@ -12,10 +12,6 @@ public class ChatClient {
              PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
              Scanner scanner = new Scanner(System.in)) {
 
-//            System.out.println(in.readLine());
-//            String username = scanner.nextLine();
-//            System.out.println(username);
-
             Thread receiveThread = new Thread(() -> {
                 try {
                     String message;
