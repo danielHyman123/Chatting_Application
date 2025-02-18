@@ -22,7 +22,7 @@ public class ChatServer {
         private Socket socket;
         private PrintWriter out;
         private BufferedReader in;
-        private String username;
+        String username;
 
         public ClientHandler(Socket socket) {
             this.socket = socket;
@@ -41,8 +41,8 @@ public class ChatServer {
                 names.add(username);
 
                 String message;
-                while ((message = in.readLine()) != null && !((message = in.readLine()).equals(username))) {
-                    System.out.println(names + message);
+                while ((message = in.readLine()) != null && !((message).equals(username))) {
+                    System.out.println(names.get(names.indexOf(username)) + ": " + message);
                     broadcastMessage(message);
                 }
             } catch (IOException e) {
